@@ -1,0 +1,54 @@
+E:\Holger\Visual Studio 2015\Projects\DGLMGraphExample\DGMLViewer\obj\Debug\DGMLViewer.csprojResolveAssemblyReference.cache
+E:\Holger\Visual Studio 2015\Projects\DGLMGraphExample\DGMLViewer\bin\Debug\DGMLViewer.dll
+E:\Holger\Visual Studio 2015\Projects\DGLMGraphExample\DGMLViewer\bin\Debug\DGMLViewer.pdb
+E:\Holger\Visual Studio 2015\Projects\DGLMGraphExample\DGMLViewer\bin\Debug\Microsoft.Msagl.dll
+E:\Holger\Visual Studio 2015\Projects\DGLMGraphExample\DGMLViewer\bin\Debug\Microsoft.Msagl.Drawing.dll
+E:\Holger\Visual Studio 2015\Projects\DGLMGraphExample\DGMLViewer\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+E:\Holger\Visual Studio 2015\Projects\DGLMGraphExample\DGMLViewer\obj\Debug\DGMLViewer.dll
+E:\Holger\Visual Studio 2015\Projects\DGLMGraphExample\DGMLViewer\obj\Debug\DGMLViewer.pdb
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-07-20\DGMLViewer\bin\Debug\DGMLViewer.dll
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-07-20\DGMLViewer\bin\Debug\DGMLViewer.pdb
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-07-20\DGMLViewer\obj\Debug\DGMLViewer.csprojResolveAssemblyReference.cache
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-07-20\DGMLViewer\obj\Debug\DGMLViewer.dll
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-07-20\DGMLViewer\obj\Debug\DGMLViewer.pdb
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-09-27\DGMLViewer\bin\Debug\DGMLViewer.dll
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-09-27\DGMLViewer\bin\Debug\DGMLViewer.pdb
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-09-27\DGMLViewer\obj\Debug\DGMLViewer.csprojResolveAssemblyReference.cache
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-09-27\DGMLViewer\obj\Debug\DGMLViewer.dll
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-09-27\DGMLViewer\obj\Debug\DGMLViewer.pdb
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-11-07\DGMLViewer\bin\Debug\DGMLViewer.dll
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-11-07\DGMLViewer\bin\Debug\DGMLViewer.pdb
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-11-07\DGMLViewer\obj\Debug\DGMLViewer.csprojResolveAssemblyReference.cache
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-11-07\DGMLViewer\obj\Debug\DGMLViewer.dll
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-11-07\DGMLViewer\obj\Debug\DGMLViewer.pdb
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-11-08\DGMLViewer\bin\Debug\DGMLViewer.dll
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-11-08\DGMLViewer\bin\Debug\DGMLViewer.pdb
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-11-08\DGMLViewer\obj\Debug\DGMLViewer.csprojResolveAssemblyReference.cache
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-11-08\DGMLViewer\obj\Debug\DGMLViewer.dll
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\TFSTool 2017-11-08\DGMLViewer\obj\Debug\DGMLViewer.pdb
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\HolgersDependencyAnalyzer\DGMLViewer\bin\Debug\DGMLViewer.dll
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\HolgersDependencyAnalyzer\DGMLViewer\bin\Debug\DGMLViewer.pdb
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\HolgersDependencyAnalyzer\DGMLViewer\obj\Debug\DGMLViewer.csprojResolveAssemblyReference.cache
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\HolgersDependencyAnalyzer\DGMLViewer\obj\Debug\DGMLViewer.dll
+C:\Users\morlok-1\Documents\Visual Studio 2015\Projects\HolgersDependencyAnalyzer\DGMLViewer\obj\Debug\DGMLViewer.pdb
+C:\Users\dr4g0\source\repos\PolarionViewer\DGMLViewer\bin\Debug\DGMLViewer.dll
+C:\Users\dr4g0\source\repos\PolarionViewer\DGMLViewer\bin\Debug\DGMLViewer.pdb
+C:\Users\dr4g0\source\repos\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.csprojAssemblyReference.cache
+C:\Users\dr4g0\source\repos\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.csproj.CoreCompileInputs.cache
+C:\Users\dr4g0\source\repos\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.csproj.CopyComplete
+C:\Users\dr4g0\source\repos\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.dll
+C:\Users\dr4g0\source\repos\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.pdb
+D:\source\repos\PolarionViewer\DGMLViewer\bin\Debug\DGMLViewer.dll
+D:\source\repos\PolarionViewer\DGMLViewer\bin\Debug\DGMLViewer.pdb
+D:\source\repos\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.csproj.CoreCompileInputs.cache
+D:\source\repos\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.csproj.CopyComplete
+D:\source\repos\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.dll
+D:\source\repos\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.pdb
+D:\source\repos\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.csprojAssemblyReference.cache
+D:\Code\PolarionViewer\DGMLViewer\bin\Debug\DGMLViewer.dll
+D:\Code\PolarionViewer\DGMLViewer\bin\Debug\DGMLViewer.pdb
+D:\Code\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.csprojAssemblyReference.cache
+D:\Code\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.csproj.CoreCompileInputs.cache
+D:\Code\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.csproj.CopyComplete
+D:\Code\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.dll
+D:\Code\PolarionViewer\DGMLViewer\obj\Debug\DGMLViewer.pdb

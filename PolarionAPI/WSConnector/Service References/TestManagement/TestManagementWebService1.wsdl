@@ -1,0 +1,1787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns3="http://ws.polarion.com/IsAvailableManagementWebService-types" xmlns:intf="http://ws.polarion.com/IsAvailableManagementWebService" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns4="http://ws.polarion.com/TrackerWebService-types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns5="http://ws.polarion.com/ProjectWebService-types" xmlns:tns1="http://ws.polarion.com/IsAvailableManagementWebService-impl" xmlns:tns2="http://ws.polarion.com/types" xmlns:impl="http://ws.polarion.com/IsAvailableManagementWebService" targetNamespace="http://ws.polarion.com/IsAvailableManagementWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://ws.polarion.com/IsAvailableManagementWebService-impl">
+      <xsd:import namespace="http://ws.polarion.com/types" />
+      <xsd:import namespace="http://ws.polarion.com/IsAvailableManagementWebService-types" />
+      <xsd:import namespace="http://ws.polarion.com/ProjectWebService-types" />
+      <xsd:import namespace="http://ws.polarion.com/TrackerWebService-types" />
+      <xsd:element name="addAttachmentToIsAvailableRecord">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="index" type="xsd:int" />
+            <xsd:element name="fileName" type="xsd:string" />
+            <xsd:element name="title" type="xsd:string" />
+            <xsd:element name="data" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addAttachmentToIsAvailableRecordResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="addAttachmentToIsAvailableRun">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="fileName" type="xsd:string" />
+            <xsd:element name="title" type="xsd:string" />
+            <xsd:element name="data" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addAttachmentToIsAvailableRunResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="addAttachmentToIsAvailableStep">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="index" type="xsd:int" />
+            <xsd:element name="testStepIndex" type="xsd:int" />
+            <xsd:element name="fileName" type="xsd:string" />
+            <xsd:element name="title" type="xsd:string" />
+            <xsd:element name="data" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addAttachmentToIsAvailableStepResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="addIsAvailableRecord">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="testCaseUri" type="tns2:SubterraURI" />
+            <xsd:element name="testResultId" type="xsd:string" />
+            <xsd:element name="testComment" type="tns2:Text" />
+            <xsd:element name="executedByUri" type="tns2:SubterraURI" />
+            <xsd:element name="executed" type="xsd:dateTime" />
+            <xsd:element name="duration" type="xsd:float" />
+            <xsd:element name="defectUri" type="tns2:SubterraURI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addIsAvailableRecordResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="addIsAvailableRecordToIsAvailableRun">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="testRecord" type="tns3:IsAvailableRecord" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addIsAvailableRecordToIsAvailableRunResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="createSummaryDefect">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="defectTemplateUri" type="tns2:SubterraURI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createSummaryDefectResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="createSummaryDefectReturn" type="tns2:SubterraURI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createIsAvailableRun">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="project" type="xsd:string" />
+            <xsd:element name="id" type="xsd:string" />
+            <xsd:element name="template" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createIsAvailableRunResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="createIsAvailableRunReturn" type="tns2:SubterraURI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteAttachmentFromIsAvailableRecord">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="index" type="xsd:int" />
+            <xsd:element name="fileName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteAttachmentFromIsAvailableRecordResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="deleteAttachmentFromIsAvailableStep">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="index" type="xsd:int" />
+            <xsd:element name="testStepIndex" type="xsd:int" />
+            <xsd:element name="fileName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteAttachmentFromIsAvailableStepResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="deleteIsAvailableRunAttachment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="fileName" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteIsAvailableRunAttachmentResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getIsAvailableRunAttachment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="filename" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailableRunAttachmentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getIsAvailableRunAttachmentReturn" type="tns4:IsAvailableRunAttachment" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailableRunAttachments">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailableRunAttachmentsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getIsAvailableRunAttachmentsReturn" type="tns4:IsAvailableRunAttachment" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailableRunById">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="project" type="xsd:string" />
+            <xsd:element name="id" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailableRunByIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getIsAvailableRunByIdReturn" type="tns3:IsAvailableRun" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailableRunByUri">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uri" type="tns2:SubterraURI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailableRunByUriResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getIsAvailableRunByUriReturn" type="tns3:IsAvailableRun" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailableSteps">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="uri" type="tns2:SubterraURI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailableStepsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getIsAvailableStepsReturn" type="tns3:IsAvailableSteps" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailableStepsConfiguration">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="projectId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailableStepsConfigurationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getIsAvailableStepsConfigurationReturn" type="tns4:EnumOption" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailablesConfiguration">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="projectId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getIsAvailablesConfigurationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getIsAvailablesConfigurationReturn" type="tns3:IsAvailablesConfiguration" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWikiContentForIsAvailableRun">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWikiContentForIsAvailableRunResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getWikiContentForIsAvailableRunReturn" type="tns2:Text" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRecords">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="query" type="xsd:string" />
+            <xsd:element name="sort" type="xsd:string" />
+            <xsd:element name="limit" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRecordsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="searchIsAvailableRecordsReturn" type="tns3:IsAvailableRecord" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunTemplates">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="query" type="xsd:string" />
+            <xsd:element name="sort" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunTemplatesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="searchIsAvailableRunTemplatesReturn" type="tns3:IsAvailableRun" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunTemplatesLimited">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="query" type="xsd:string" />
+            <xsd:element name="sort" type="xsd:string" />
+            <xsd:element name="resultsLimit" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunTemplatesLimitedResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="searchIsAvailableRunTemplatesLimitedReturn" type="tns3:IsAvailableRun" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunTemplatesWithFields">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="query" type="xsd:string" />
+            <xsd:element name="sort" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="fields" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunTemplatesWithFieldsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="searchIsAvailableRunTemplatesWithFieldsReturn" type="tns3:IsAvailableRun" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunTemplatesWithFieldsLimited">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="query" type="xsd:string" />
+            <xsd:element name="sort" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="fields" type="xsd:string" />
+            <xsd:element name="resultsLimit" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunTemplatesWithFieldsLimitedResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="searchIsAvailableRunTemplatesWithFieldsLimitedReturn" type="tns3:IsAvailableRun" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRuns">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="query" type="xsd:string" />
+            <xsd:element name="sort" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="searchIsAvailableRunsReturn" type="tns3:IsAvailableRun" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunsLimited">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="query" type="xsd:string" />
+            <xsd:element name="sort" type="xsd:string" />
+            <xsd:element name="resultsLimit" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunsLimitedResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="searchIsAvailableRunsLimitedReturn" type="tns3:IsAvailableRun" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunsWithFields">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="query" type="xsd:string" />
+            <xsd:element name="sort" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="fields" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunsWithFieldsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="searchIsAvailableRunsWithFieldsReturn" type="tns3:IsAvailableRun" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunsWithFieldsLimited">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="query" type="xsd:string" />
+            <xsd:element name="sort" type="xsd:string" />
+            <xsd:element maxOccurs="unbounded" name="fields" type="xsd:string" />
+            <xsd:element name="resultsLimit" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchIsAvailableRunsWithFieldsLimitedResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="searchIsAvailableRunsWithFieldsLimitedReturn" type="tns3:IsAvailableRun" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setIsAvailableSteps">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="workItemURI" type="tns2:SubterraURI" />
+            <xsd:element maxOccurs="unbounded" name="testSteps" type="tns3:IsAvailableStep" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setIsAvailableStepsResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="updateSummaryDefect">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="source" type="xsd:string" />
+            <xsd:element name="totalFailures" type="xsd:int" />
+            <xsd:element name="totalErrors" type="xsd:int" />
+            <xsd:element name="totalIsAvailables" type="xsd:int" />
+            <xsd:element name="defectTemplateUri" type="tns2:SubterraURI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateSummaryDefectResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updateSummaryDefectReturn" type="tns2:SubterraURI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateIsAvailableRecord">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="index" type="xsd:int" />
+            <xsd:element name="testResultId" type="xsd:string" />
+            <xsd:element name="testComment" type="tns2:Text" />
+            <xsd:element name="executedByUri" type="tns2:SubterraURI" />
+            <xsd:element name="executed" type="xsd:dateTime" />
+            <xsd:element name="duration" type="xsd:float" />
+            <xsd:element name="defectUri" type="tns2:SubterraURI" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateIsAvailableRecordResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="updateIsAvailableRecordAtIndex">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="index" type="xsd:int" />
+            <xsd:element name="testRecord" type="tns3:IsAvailableRecord" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateIsAvailableRecordAtIndexResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="updateIsAvailableRun">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="content" type="tns3:IsAvailableRun" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateIsAvailableRunResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="updateIsAvailableRunAttachment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="fileName" type="xsd:string" />
+            <xsd:element name="title" type="xsd:string" />
+            <xsd:element name="data" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateIsAvailableRunAttachmentResponse">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="updateWikiContentForIsAvailableRun">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="testRunUri" type="tns2:SubterraURI" />
+            <xsd:element name="content" type="tns2:Text" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateWikiContentForIsAvailableRunResponse">
+        <xsd:complexType />
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://ws.polarion.com/types">
+      <xsd:import namespace="http://ws.polarion.com/IsAvailableManagementWebService-types" />
+      <xsd:import namespace="http://ws.polarion.com/ProjectWebService-types" />
+      <xsd:import namespace="http://ws.polarion.com/TrackerWebService-types" />
+      <xsd:simpleType name="SubterraURI">
+        <xsd:restriction base="xsd:string" />
+      </xsd:simpleType>
+      <xsd:complexType name="Text">
+        <xsd:sequence>
+          <xsd:element name="type" type="xsd:string" />
+          <xsd:element name="content" type="xsd:string" />
+          <xsd:element name="contentLossy" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSubterraURI">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="SubterraURI" type="tns2:SubterraURI" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfstring">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="string" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="Location">
+        <xsd:restriction base="xsd:string" />
+      </xsd:simpleType>
+      <xsd:complexType name="ArrayOfText">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Text" type="tns2:Text" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="property">
+        <xsd:sequence>
+          <xsd:element name="key" type="xsd:string" />
+          <xsd:element name="value" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Properties">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="property" type="tns2:property" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="Currency">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:fractionDigits value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://ws.polarion.com/ProjectWebService-types">
+      <xsd:import namespace="http://ws.polarion.com/types" />
+      <xsd:import namespace="http://ws.polarion.com/IsAvailableManagementWebService-types" />
+      <xsd:import namespace="http://ws.polarion.com/TrackerWebService-types" />
+      <xsd:complexType name="User">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="description" type="tns2:Text" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="disabledNotifications" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="email" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="name" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="voteURIs" type="tns2:ArrayOfSubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="watcheURIs" type="tns2:ArrayOfSubterraURI" />
+        </xsd:sequence>
+        <xsd:attribute name="uri" type="tns2:SubterraURI" />
+        <xsd:attribute name="unresolvable" type="xsd:boolean" />
+      </xsd:complexType>
+      <xsd:complexType name="Project">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="active" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="description" type="tns2:Text" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="finish" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="lead" type="tns5:User" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="location" type="tns2:Location" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="lockWorkRecordsDate" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="name" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="projectGroupURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="start" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="trackerPrefix" type="xsd:string" />
+        </xsd:sequence>
+        <xsd:attribute name="uri" type="tns2:SubterraURI" />
+        <xsd:attribute name="unresolvable" type="xsd:boolean" />
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://ws.polarion.com/TrackerWebService-types">
+      <xsd:import namespace="http://ws.polarion.com/types" />
+      <xsd:import namespace="http://ws.polarion.com/IsAvailableManagementWebService-types" />
+      <xsd:import namespace="http://ws.polarion.com/ProjectWebService-types" />
+      <xsd:complexType name="IsAvailableRunAttachment">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="author" type="tns5:User" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="fileName" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="length" type="xsd:long" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="testRunURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="title" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="updated" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="url" type="xsd:string" />
+        </xsd:sequence>
+        <xsd:attribute name="uri" type="tns2:SubterraURI" />
+        <xsd:attribute name="unresolvable" type="xsd:boolean" />
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfIsAvailableRunAttachment">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="IsAvailableRunAttachment" type="tns4:IsAvailableRunAttachment" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EnumOptionId">
+        <xsd:sequence>
+          <xsd:element name="id" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfEnumOptionId">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="EnumOptionId" type="tns4:EnumOptionId" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ImportedComment">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="author" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="created" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="initials" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SignatureData">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="targetStatusId" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="verdict" type="tns4:EnumOptionId" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ModuleComment">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="author" type="tns5:User" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="childCommentURIs" type="tns2:ArrayOfSubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="created" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="importedComment" type="tns4:ImportedComment" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="parentCommentURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="referredWorkItemURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="resolved" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="signatureData" type="tns4:SignatureData" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="tags" type="tns4:ArrayOfEnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="text" type="tns2:Text" />
+        </xsd:sequence>
+        <xsd:attribute name="uri" type="tns2:SubterraURI" />
+        <xsd:attribute name="unresolvable" type="xsd:boolean" />
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfModuleComment">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ModuleComment" type="tns4:ModuleComment" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Signature">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="signedBy" type="tns5:User" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="signedRevision" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="signerRole" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="verdict" type="tns4:EnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="verdictTime" type="xsd:dateTime" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSignature">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Signature" type="tns4:Signature" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SignatureContext">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="signatures" type="tns4:ArrayOfSignature" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="targetStatusId" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="transitionDataRevision" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="user" type="tns5:User" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSignatureContext">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="SignatureContext" type="tns4:SignatureContext" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Custom">
+        <xsd:sequence>
+          <xsd:element name="key" type="xsd:string" />
+          <xsd:element name="value" nillable="true" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCustom">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Custom" type="tns4:Custom" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Module">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="allowedWITypes" type="tns4:ArrayOfEnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="areLinksFromParentToChild" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="author" type="tns5:User" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="autoSuspect" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="branchedFrom" type="tns4:Module" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="branchedWithQuery" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="comments" type="tns4:ArrayOfModuleComment" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="created" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="derivedFields" type="tns2:ArrayOfstring" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="derivedFromURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="derivedFromLinkRole" type="tns4:EnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="homePageContent" type="tns2:Text" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="location" type="tns2:Location" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="moduleAbsoluteLocation" type="tns2:Location" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="moduleFolder" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="moduleLocation" type="tns2:Location" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="moduleName" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="project" type="tns5:Project" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="signatureContexts" type="tns4:ArrayOfSignatureContext" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="status" type="tns4:EnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="structureLinkRole" type="tns4:EnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="title" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="type" type="tns4:EnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="updated" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="updatedBy" type="tns5:User" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="usesOutlineNumbering" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="customFields" type="tns4:ArrayOfCustom" />
+        </xsd:sequence>
+        <xsd:attribute name="uri" type="tns2:SubterraURI" />
+        <xsd:attribute name="unresolvable" type="xsd:boolean" />
+      </xsd:complexType>
+      <xsd:complexType name="EnumOption">
+        <xsd:sequence>
+          <xsd:element name="default" type="xsd:boolean" />
+          <xsd:element name="enumId" nillable="true" type="xsd:string" />
+          <xsd:element name="hidden" type="xsd:boolean" />
+          <xsd:element name="id" nillable="true" type="xsd:string" />
+          <xsd:element name="name" nillable="true" type="xsd:string" />
+          <xsd:element name="phantom" type="xsd:boolean" />
+          <xsd:element name="properties" nillable="true" type="tns2:Properties" />
+          <xsd:element name="sequenceNumber" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PriorityOptionId">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns4:EnumOptionId">
+            <xsd:sequence />
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfPriorityOptionId">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="PriorityOptionId" type="tns4:PriorityOptionId" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PriorityOpt">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns4:EnumOption">
+            <xsd:sequence>
+              <xsd:element name="float" type="xsd:float" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="CustomFieldType">
+        <xsd:sequence>
+          <xsd:element name="defaultValue" nillable="true" type="xsd:anyType" />
+          <xsd:element name="dependsOn" nillable="true" type="xsd:string" />
+          <xsd:element name="description" nillable="true" type="xsd:string" />
+          <xsd:element name="id" nillable="true" type="xsd:string" />
+          <xsd:element name="name" nillable="true" type="xsd:string" />
+          <xsd:element name="required" type="xsd:boolean" />
+          <xsd:element name="type" nillable="true" type="xsd:QName" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EnumCustomFieldType">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns4:CustomFieldType">
+            <xsd:sequence>
+              <xsd:element name="enumId" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://ws.polarion.com/IsAvailableManagementWebService-types">
+      <xsd:import namespace="http://ws.polarion.com/types" />
+      <xsd:import namespace="http://ws.polarion.com/ProjectWebService-types" />
+      <xsd:import namespace="http://ws.polarion.com/TrackerWebService-types" />
+      <xsd:complexType name="IsAvailableStepResult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="attachments" type="tns4:ArrayOfIsAvailableRunAttachment" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="comment" type="tns2:Text" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="result" type="tns4:EnumOptionId" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfIsAvailableStepResult">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="IsAvailableStepResult" type="tns3:IsAvailableStepResult" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IsAvailableRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="attachments" type="tns4:ArrayOfIsAvailableRunAttachment" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="comment" type="tns2:Text" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="defectURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="duration" type="xsd:float" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="executed" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="executedByURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="result" type="tns4:EnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="testCaseURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="testCaseRevision" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="testStepResults" type="tns3:ArrayOfIsAvailableStepResult" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfIsAvailableRecord">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="IsAvailableRecord" type="tns3:IsAvailableRecord" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IsAvailableRun">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="attachments" type="tns4:ArrayOfIsAvailableRunAttachment" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="authorURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="created" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="document" type="tns4:Module" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="finishedOn" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="groupId" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="isTemplate" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="keepInHistory" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="location" type="tns2:Location" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="projectURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="query" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="records" type="tns3:ArrayOfIsAvailableRecord" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="selectIsAvailableCasesBy" type="tns4:EnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="status" type="tns4:EnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="summaryDefectURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="templateURI" type="tns2:SubterraURI" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="type" type="tns4:EnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="updated" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="customFields" type="tns4:ArrayOfCustom" />
+        </xsd:sequence>
+        <xsd:attribute name="uri" type="tns2:SubterraURI" />
+        <xsd:attribute name="unresolvable" type="xsd:boolean" />
+      </xsd:complexType>
+      <xsd:complexType name="IsAvailableStep">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="values" type="tns2:ArrayOfText" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfIsAvailableStep">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="IsAvailableStep" type="tns3:IsAvailableStep" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IsAvailableSteps">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="keys" type="tns4:ArrayOfEnumOptionId" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="steps" type="tns3:ArrayOfIsAvailableStep" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="property">
+        <xsd:sequence>
+          <xsd:element name="key" type="xsd:string" />
+          <xsd:element name="value" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Properties">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="property" type="tns3:property" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IsAvailablesConfiguration">
+        <xsd:sequence>
+          <xsd:element name="defectAutoAssignementEnabled" type="xsd:boolean" />
+          <xsd:element name="defectReuseType" nillable="true" type="xsd:string" />
+          <xsd:element name="defectTemplate" nillable="true" type="xsd:string" />
+          <xsd:element name="defectToIsAvailableCaseLinkRoleId" nillable="true" type="xsd:string" />
+          <xsd:element name="defectWorkItemType" nillable="true" type="xsd:string" />
+          <xsd:element name="defectsProject" nillable="true" type="xsd:string" />
+          <xsd:element name="fieldsToCopyFromIsAvailableCaseToDefect" nillable="true" type="tns3:Properties" />
+          <xsd:element name="fieldsToCopyFromIsAvailableRunToLinkedDefect" nillable="true" type="tns3:Properties" />
+          <xsd:element name="fieldsToCopyFromIsAvailableRunToNewDefect" nillable="true" type="tns3:Properties" />
+          <xsd:element name="maxCreatedDefects" nillable="true" type="xsd:int" />
+          <xsd:element name="maxCreatedDefectsPercent" nillable="true" type="xsd:int" />
+          <xsd:element name="resultErrorEnumId" nillable="true" type="xsd:string" />
+          <xsd:element name="resultFailedEnumId" nillable="true" type="xsd:string" />
+          <xsd:element name="resultPassedEnumId" nillable="true" type="xsd:string" />
+          <xsd:element name="retestAllowed" type="xsd:boolean" />
+          <xsd:element name="statusErrorEnumId" nillable="true" type="xsd:string" />
+          <xsd:element name="statusFailedEnumId" nillable="true" type="xsd:string" />
+          <xsd:element name="statusOkEnumId" nillable="true" type="xsd:string" />
+          <xsd:element name="summaryDefectSeverity" nillable="true" type="xsd:string" />
+          <xsd:element name="testCaseIdCustomField" nillable="true" type="xsd:string" />
+          <xsd:element name="testCaseTemplate" nillable="true" type="xsd:string" />
+          <xsd:element name="testCaseIsAvailableCommentFieldId" nillable="true" type="xsd:string" />
+          <xsd:element name="testCaseIsAvailableResultFieldId" nillable="true" type="xsd:string" />
+          <xsd:element name="testCaseWorkItemType" nillable="true" type="xsd:string" />
+          <xsd:element name="testRunTemplate" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getIsAvailableRunAttachmentsResponse">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableRunAttachmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateWikiContentForIsAvailableRunResponse">
+    <wsdl:part name="parameters" element="tns1:updateWikiContentForIsAvailableRunResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunsResponse">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunsResponse" />
+  </wsdl:message>
+  <wsdl:message name="createIsAvailableRunResponse">
+    <wsdl:part name="parameters" element="tns1:createIsAvailableRunResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunsRequest">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRuns" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailableRunAttachmentRequest">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableRunAttachment" />
+  </wsdl:message>
+  <wsdl:message name="deleteIsAvailableRunAttachmentRequest">
+    <wsdl:part name="parameters" element="tns1:deleteIsAvailableRunAttachment" />
+  </wsdl:message>
+  <wsdl:message name="updateIsAvailableRunRequest">
+    <wsdl:part name="parameters" element="tns1:updateIsAvailableRun" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunTemplatesWithFieldsLimitedResponse">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunTemplatesWithFieldsLimitedResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunTemplatesResponse">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunTemplatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="addAttachmentToIsAvailableStepResponse">
+    <wsdl:part name="parameters" element="tns1:addAttachmentToIsAvailableStepResponse" />
+  </wsdl:message>
+  <wsdl:message name="createIsAvailableRunRequest">
+    <wsdl:part name="parameters" element="tns1:createIsAvailableRun" />
+  </wsdl:message>
+  <wsdl:message name="addAttachmentToIsAvailableRecordRequest">
+    <wsdl:part name="parameters" element="tns1:addAttachmentToIsAvailableRecord" />
+  </wsdl:message>
+  <wsdl:message name="updateIsAvailableRecordAtIndexRequest">
+    <wsdl:part name="parameters" element="tns1:updateIsAvailableRecordAtIndex" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailableRunAttachmentsRequest">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableRunAttachments" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunsLimitedResponse">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunsLimitedResponse" />
+  </wsdl:message>
+  <wsdl:message name="addAttachmentToIsAvailableStepRequest">
+    <wsdl:part name="parameters" element="tns1:addAttachmentToIsAvailableStep" />
+  </wsdl:message>
+  <wsdl:message name="updateSummaryDefectResponse">
+    <wsdl:part name="parameters" element="tns1:updateSummaryDefectResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailablesConfigurationRequest">
+    <wsdl:part name="parameters" element="tns1:getIsAvailablesConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="setIsAvailableStepsResponse">
+    <wsdl:part name="parameters" element="tns1:setIsAvailableStepsResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateIsAvailableRecordAtIndexResponse">
+    <wsdl:part name="parameters" element="tns1:updateIsAvailableRecordAtIndexResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunTemplatesWithFieldsLimitedRequest">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunTemplatesWithFieldsLimited" />
+  </wsdl:message>
+  <wsdl:message name="deleteAttachmentFromIsAvailableStepRequest">
+    <wsdl:part name="parameters" element="tns1:deleteAttachmentFromIsAvailableStep" />
+  </wsdl:message>
+  <wsdl:message name="createSummaryDefectResponse">
+    <wsdl:part name="parameters" element="tns1:createSummaryDefectResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteAttachmentFromIsAvailableRecordRequest">
+    <wsdl:part name="parameters" element="tns1:deleteAttachmentFromIsAvailableRecord" />
+  </wsdl:message>
+  <wsdl:message name="addAttachmentToIsAvailableRunResponse">
+    <wsdl:part name="parameters" element="tns1:addAttachmentToIsAvailableRunResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailableRunByIdResponse">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableRunByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateSummaryDefectRequest">
+    <wsdl:part name="parameters" element="tns1:updateSummaryDefect" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailableRunAttachmentResponse">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableRunAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunTemplatesWithFieldsRequest">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunTemplatesWithFields" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunsWithFieldsResponse">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunsWithFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="addAttachmentToIsAvailableRecordResponse">
+    <wsdl:part name="parameters" element="tns1:addAttachmentToIsAvailableRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="addAttachmentToIsAvailableRunRequest">
+    <wsdl:part name="parameters" element="tns1:addAttachmentToIsAvailableRun" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailablesConfigurationResponse">
+    <wsdl:part name="parameters" element="tns1:getIsAvailablesConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailableStepsResponse">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableStepsResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteIsAvailableRunAttachmentResponse">
+    <wsdl:part name="parameters" element="tns1:deleteIsAvailableRunAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWikiContentForIsAvailableRunRequest">
+    <wsdl:part name="parameters" element="tns1:getWikiContentForIsAvailableRun" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunsWithFieldsLimitedResponse">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunsWithFieldsLimitedResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailableRunByIdRequest">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableRunById" />
+  </wsdl:message>
+  <wsdl:message name="addIsAvailableRecordToIsAvailableRunResponse">
+    <wsdl:part name="parameters" element="tns1:addIsAvailableRecordToIsAvailableRunResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunTemplatesRequest">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunTemplates" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunsWithFieldsRequest">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunsWithFields" />
+  </wsdl:message>
+  <wsdl:message name="updateIsAvailableRunAttachmentResponse">
+    <wsdl:part name="parameters" element="tns1:updateIsAvailableRunAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunsLimitedRequest">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunsLimited" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailableRunByUriRequest">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableRunByUri" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailableRunByUriResponse">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableRunByUriResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateWikiContentForIsAvailableRunRequest">
+    <wsdl:part name="parameters" element="tns1:updateWikiContentForIsAvailableRun" />
+  </wsdl:message>
+  <wsdl:message name="updateIsAvailableRunResponse">
+    <wsdl:part name="parameters" element="tns1:updateIsAvailableRunResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailableStepsRequest">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableSteps" />
+  </wsdl:message>
+  <wsdl:message name="addIsAvailableRecordRequest">
+    <wsdl:part name="parameters" element="tns1:addIsAvailableRecord" />
+  </wsdl:message>
+  <wsdl:message name="getWikiContentForIsAvailableRunResponse">
+    <wsdl:part name="parameters" element="tns1:getWikiContentForIsAvailableRunResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRecordsResponse">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailableStepsConfigurationResponse">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableStepsConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateIsAvailableRunAttachmentRequest">
+    <wsdl:part name="parameters" element="tns1:updateIsAvailableRunAttachment" />
+  </wsdl:message>
+  <wsdl:message name="setIsAvailableStepsRequest">
+    <wsdl:part name="parameters" element="tns1:setIsAvailableSteps" />
+  </wsdl:message>
+  <wsdl:message name="createSummaryDefectRequest">
+    <wsdl:part name="parameters" element="tns1:createSummaryDefect" />
+  </wsdl:message>
+  <wsdl:message name="deleteAttachmentFromIsAvailableStepResponse">
+    <wsdl:part name="parameters" element="tns1:deleteAttachmentFromIsAvailableStepResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunTemplatesLimitedResponse">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunTemplatesLimitedResponse" />
+  </wsdl:message>
+  <wsdl:message name="addIsAvailableRecordResponse">
+    <wsdl:part name="parameters" element="tns1:addIsAvailableRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRecordsRequest">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRecords" />
+  </wsdl:message>
+  <wsdl:message name="addIsAvailableRecordToIsAvailableRunRequest">
+    <wsdl:part name="parameters" element="tns1:addIsAvailableRecordToIsAvailableRun" />
+  </wsdl:message>
+  <wsdl:message name="getIsAvailableStepsConfigurationRequest">
+    <wsdl:part name="parameters" element="tns1:getIsAvailableStepsConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunTemplatesWithFieldsResponse">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunTemplatesWithFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateIsAvailableRecordRequest">
+    <wsdl:part name="parameters" element="tns1:updateIsAvailableRecord" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunsWithFieldsLimitedRequest">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunsWithFieldsLimited" />
+  </wsdl:message>
+  <wsdl:message name="updateIsAvailableRecordResponse">
+    <wsdl:part name="parameters" element="tns1:updateIsAvailableRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteAttachmentFromIsAvailableRecordResponse">
+    <wsdl:part name="parameters" element="tns1:deleteAttachmentFromIsAvailableRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchIsAvailableRunTemplatesLimitedRequest">
+    <wsdl:part name="parameters" element="tns1:searchIsAvailableRunTemplatesLimited" />
+  </wsdl:message>
+  <wsdl:portType name="IsAvailableManagementWebService">
+    <wsdl:operation name="addAttachmentToIsAvailableRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Adds new Attachment to specified IsAvailable Record. 
+Created attachment can have differed file name from given one.
+@param testRunUri testRunUri URI of the IsAvailable Run which contains target test record.
+@param index index of the IsAvailable Record in the test run.
+@param fileName attachment file name
+@param title attachment title
+@param data attachment data
+@since 3.7.3   </wsdl:documentation>
+      <wsdl:input name="addAttachmentToIsAvailableRecordRequest" message="impl:addAttachmentToIsAvailableRecordRequest" />
+      <wsdl:output name="addAttachmentToIsAvailableRecordResponse" message="impl:addAttachmentToIsAvailableRecordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addAttachmentToIsAvailableRun">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Adds new Attachment to given IsAvailable Run or IsAvailable Run Template. 
+@param testRunUri URI of the target IsAvailable Run or IsAvailable Run Template
+@param fileName attachment file name
+@param title attachment title
+@param data attachment data
+@since 3.7.1   </wsdl:documentation>
+      <wsdl:input name="addAttachmentToIsAvailableRunRequest" message="impl:addAttachmentToIsAvailableRunRequest" />
+      <wsdl:output name="addAttachmentToIsAvailableRunResponse" message="impl:addAttachmentToIsAvailableRunResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addAttachmentToIsAvailableStep">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Adds new Attachment to specified IsAvailable Step. 
+Created attachment can have differed file name from given one.
+@param testRunUri testRunUri URI of the test run which contains target IsAvailable Step.
+@param index index of the IsAvailable Record in the IsAvailable Run which contains target IsAvailable Step.
+@param testStepIndex index of the IsAvailable Step in the IsAvailable Record.
+@param fileName attachment file name
+@param title attachment title
+@param data attachment data
+@since 3.7.3   </wsdl:documentation>
+      <wsdl:input name="addAttachmentToIsAvailableStepRequest" message="impl:addAttachmentToIsAvailableStepRequest" />
+      <wsdl:output name="addAttachmentToIsAvailableStepResponse" message="impl:addAttachmentToIsAvailableStepResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addIsAvailableRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Add a test record to a test run.
+@param testRunUri URI of the test run to which the test record will be added.
+@param testCaseUri URI of the test case to be executed.
+@param testResultId ID of the test result, can be {@code null}.
+@param testComment comment to be tracked with the test record, can be {@code null}.
+@param executedByUri URI of the user to be used as author of the test record, can be {@code null}.
+@param executed date when the test case has been executed, can be {@code null}.
+@param duration duration of the test case execution, any negative value is treated as {@code null}.
+@param defectUri URI of the defect Work Item to be linked from created record, can be {@code null}. 
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="addIsAvailableRecordRequest" message="impl:addIsAvailableRecordRequest" />
+      <wsdl:output name="addIsAvailableRecordResponse" message="impl:addIsAvailableRecordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addIsAvailableRecordToIsAvailableRun">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Adds the IsAvailable Record to the IsAvailable Run. If the IsAvailable Record to add 
+has result but does not have IsAvailable Case revision filled, the added IsAvailable Record will have 
+the IsAvailable Case revision set automatically to the current revision of the IsAvailable Case. 
+@param testRunUri URI of the target IsAvailable Run 
+@param testRecord IsAvailable Record to add
+@since 3.7.0   </wsdl:documentation>
+      <wsdl:input name="addIsAvailableRecordToIsAvailableRunRequest" message="impl:addIsAvailableRecordToIsAvailableRunRequest" />
+      <wsdl:output name="addIsAvailableRecordToIsAvailableRunResponse" message="impl:addIsAvailableRecordToIsAvailableRunResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="createSummaryDefect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Create or return existing summary defect Work Item of a test run.
+@param testRunUri URI of the test run to update the summary defect for.
+@param defectTemplateUri URI of the defect template Work Item to be used, the configured template will be used if {@code null}.
+@return the URI of the created or existing summary defect Work Item.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="createSummaryDefectRequest" message="impl:createSummaryDefectRequest" />
+      <wsdl:output name="createSummaryDefectResponse" message="impl:createSummaryDefectResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="createIsAvailableRun">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Create a new test run
+@param project project the test run will be created in. 
+@param id id of the test run to be created.
+@param template template to be used to create the test run.
+@return URI of the created test run.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="createIsAvailableRunRequest" message="impl:createIsAvailableRunRequest" />
+      <wsdl:output name="createIsAvailableRunResponse" message="impl:createIsAvailableRunResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAttachmentFromIsAvailableRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Deletes IsAvailable Record Attachment given by IsAvailable Run, index of IsAvailable Record and attachment's file name.
+@param testRunUri testRunUri URI of the test run which contains target test record.
+@param index index of the IsAvailable Record in the test run.
+@param fileName attachment file name
+@since 3.7.3   </wsdl:documentation>
+      <wsdl:input name="deleteAttachmentFromIsAvailableRecordRequest" message="impl:deleteAttachmentFromIsAvailableRecordRequest" />
+      <wsdl:output name="deleteAttachmentFromIsAvailableRecordResponse" message="impl:deleteAttachmentFromIsAvailableRecordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAttachmentFromIsAvailableStep">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Deletes IsAvailable Step Attachment given by IsAvailable Run, index of IsAvailable Record, index of IsAvailable Step and attachment's file name.
+@param testRunUri testRunUri URI of the test run which contains target test record.
+@param index index of the IsAvailable Record in the test run.
+@param testStepIndex index of the IsAvailable Step in the IsAvailable Record.
+@param fileName attachment file name
+@since 3.7.3   </wsdl:documentation>
+      <wsdl:input name="deleteAttachmentFromIsAvailableStepRequest" message="impl:deleteAttachmentFromIsAvailableStepRequest" />
+      <wsdl:output name="deleteAttachmentFromIsAvailableStepResponse" message="impl:deleteAttachmentFromIsAvailableStepResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteIsAvailableRunAttachment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Deletes IsAvailable Run Attachment given by IsAvailable Run and attachment's file name.
+Method is applicable on IsAvailable Run Template. 
+@param testRunUri URI of IsAvailable Run or IsAvailable Run Template containing target attachment (not null)
+@param fileName file name of Attachment to delete
+@since 3.7.1   </wsdl:documentation>
+      <wsdl:input name="deleteIsAvailableRunAttachmentRequest" message="impl:deleteIsAvailableRunAttachmentRequest" />
+      <wsdl:output name="deleteIsAvailableRunAttachmentResponse" message="impl:deleteIsAvailableRunAttachmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableRunAttachment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Returns Attachment of given IsAvailable Run or IsAvailable Run Template. 
+@param testRunUri URI of the target IsAvailable Run or IsAvailable Run Template
+@return the attachment
+@since 3.7.1   </wsdl:documentation>
+      <wsdl:input name="getIsAvailableRunAttachmentRequest" message="impl:getIsAvailableRunAttachmentRequest" />
+      <wsdl:output name="getIsAvailableRunAttachmentResponse" message="impl:getIsAvailableRunAttachmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableRunAttachments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Returns Attachments of given IsAvailable Run or IsAvailable Run Template. 
+@param testRunUri URI of the target IsAvailable Run or IsAvailable Run Template
+@return attachments
+@since 3.7.1   </wsdl:documentation>
+      <wsdl:input name="getIsAvailableRunAttachmentsRequest" message="impl:getIsAvailableRunAttachmentsRequest" />
+      <wsdl:output name="getIsAvailableRunAttachmentsResponse" message="impl:getIsAvailableRunAttachmentsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableRunById">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Returns a specific test run.
+@param project ID of the project that contains the test run to load.
+@param id ID of the test run to load.
+@return the test run.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="getIsAvailableRunByIdRequest" message="impl:getIsAvailableRunByIdRequest" />
+      <wsdl:output name="getIsAvailableRunByIdResponse" message="impl:getIsAvailableRunByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableRunByUri">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Returns a specific test run.
+@param uri URI of the test run to load.
+@return the test run.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="getIsAvailableRunByUriRequest" message="impl:getIsAvailableRunByUriRequest" />
+      <wsdl:output name="getIsAvailableRunByUriResponse" message="impl:getIsAvailableRunByUriResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableSteps">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Gets the IsAvailableSteps of WI with given URI.
+@param uri the URI of the work item to get.
+@return the test steps of WI with given URI
+@since 3.7.0   </wsdl:documentation>
+      <wsdl:input name="getIsAvailableStepsRequest" message="impl:getIsAvailableStepsRequest" />
+      <wsdl:output name="getIsAvailableStepsResponse" message="impl:getIsAvailableStepsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableStepsConfiguration">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Gets the configuration of the IsAvailable Steps custom field.
+@param projectId the id of the project containing the IsAvailable Steps configuration 
+@return an EnumOption Array containing the configuration for each IsAvailable Steps column 
+@since 3.7.0   </wsdl:documentation>
+      <wsdl:input name="getIsAvailableStepsConfigurationRequest" message="impl:getIsAvailableStepsConfigurationRequest" />
+      <wsdl:output name="getIsAvailableStepsConfigurationResponse" message="impl:getIsAvailableStepsConfigurationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailablesConfiguration">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Get the test management configuration for a specific project.
+@param projectId the ID of the project to get the tests configuration for.
+@return the configuration.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="getIsAvailablesConfigurationRequest" message="impl:getIsAvailablesConfigurationRequest" />
+      <wsdl:output name="getIsAvailablesConfigurationResponse" message="impl:getIsAvailablesConfigurationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getWikiContentForIsAvailableRun">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Returns Wiki Page content of IsAvailable Run or IsAvailable Run Template. 
+@param testRunUri URI of the target IsAvailable Run or IsAvailable Run Template
+@return Wiki Page content of IsAvailable Run or IsAvailable Run Template  
+@since 3.7.1   </wsdl:documentation>
+      <wsdl:input name="getWikiContentForIsAvailableRunRequest" message="impl:getWikiContentForIsAvailableRunRequest" />
+      <wsdl:output name="getWikiContentForIsAvailableRunResponse" message="impl:getWikiContentForIsAvailableRunResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRecords">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Search for test records.
+@param query the query used to find test records.
+@param sort the sort field.
+@param limit the maximum number of records to be returned, -1 for no limit.
+@return the found test records.
+@since 3.6.0
+@deprecated since 3.8.1 with no direct replacement.   </wsdl:documentation>
+      <wsdl:input name="searchIsAvailableRecordsRequest" message="impl:searchIsAvailableRecordsRequest" />
+      <wsdl:output name="searchIsAvailableRecordsResponse" message="impl:searchIsAvailableRecordsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunTemplates">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Search test run templates.
+@param query the query used to find test run templates.
+@param sort the field used to sort the result.
+@return the found test run templates.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="searchIsAvailableRunTemplatesRequest" message="impl:searchIsAvailableRunTemplatesRequest" />
+      <wsdl:output name="searchIsAvailableRunTemplatesResponse" message="impl:searchIsAvailableRunTemplatesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunTemplatesLimited">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Search test run templates.
+@param query the query used to find test run templates.
+@param sort the field used to sort the result.
+@param resultsLimit the maximum number of records to be returned, -1 for no limit.
+@return the found test run templates.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="searchIsAvailableRunTemplatesLimitedRequest" message="impl:searchIsAvailableRunTemplatesLimitedRequest" />
+      <wsdl:output name="searchIsAvailableRunTemplatesLimitedResponse" message="impl:searchIsAvailableRunTemplatesLimitedResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunTemplatesWithFields">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Search test run templates.
+@param query the query used to find test run templates.
+@param sort the field used to sort the result.
+@param fields test run fields that should be initialized, all other fields will be {@code null}.
+@return the found test run templates.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="searchIsAvailableRunTemplatesWithFieldsRequest" message="impl:searchIsAvailableRunTemplatesWithFieldsRequest" />
+      <wsdl:output name="searchIsAvailableRunTemplatesWithFieldsResponse" message="impl:searchIsAvailableRunTemplatesWithFieldsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunTemplatesWithFieldsLimited">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Search test run templates.
+@param query the query used to find test run templates.
+@param sort the field used to sort the result.
+@param fields test run fields that should be initialized, all other fields will be {@code null}.
+@param resultsLimit the maximum number of records to be returned, -1 for no limit.
+@return the found test run templates.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="searchIsAvailableRunTemplatesWithFieldsLimitedRequest" message="impl:searchIsAvailableRunTemplatesWithFieldsLimitedRequest" />
+      <wsdl:output name="searchIsAvailableRunTemplatesWithFieldsLimitedResponse" message="impl:searchIsAvailableRunTemplatesWithFieldsLimitedResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRuns">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Search test runs.
+@param query the query used to find test runs.
+@param sort the field used to sort the result.
+@return the found test runs.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="searchIsAvailableRunsRequest" message="impl:searchIsAvailableRunsRequest" />
+      <wsdl:output name="searchIsAvailableRunsResponse" message="impl:searchIsAvailableRunsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunsLimited">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Search test runs.
+@param query the query used to find test runs.
+@param sort the field used to sort the result.
+@param resultsLimit the maximum number of records to be returned, -1 for no limit.
+@return the found test runs.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="searchIsAvailableRunsLimitedRequest" message="impl:searchIsAvailableRunsLimitedRequest" />
+      <wsdl:output name="searchIsAvailableRunsLimitedResponse" message="impl:searchIsAvailableRunsLimitedResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunsWithFields">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Search test runs.
+@param query the query used to find test runs.
+@param sort the field used to sort the result.
+@param fields test run fields that should be initialized, all other fields will be {@code null}.
+@return the found test runs.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="searchIsAvailableRunsWithFieldsRequest" message="impl:searchIsAvailableRunsWithFieldsRequest" />
+      <wsdl:output name="searchIsAvailableRunsWithFieldsResponse" message="impl:searchIsAvailableRunsWithFieldsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunsWithFieldsLimited">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Search test runs.
+@param query the query used to find test runs.
+@param sort the field used to sort the result.
+@param fields test run fields that should be initialized, all other fields will be {@code null}.
+@param resultsLimit the maximum number of records to be returned, -1 for no limit.
+@return the found test runs.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="searchIsAvailableRunsWithFieldsLimitedRequest" message="impl:searchIsAvailableRunsWithFieldsLimitedRequest" />
+      <wsdl:output name="searchIsAvailableRunsWithFieldsLimitedResponse" message="impl:searchIsAvailableRunsWithFieldsLimitedResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setIsAvailableSteps">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Adds IsAvailable Steps to WI with given URI (add operation). 
+If WI already has IsAvailable Steps, they will be completely replaced (update operation). 
+If the testSteps parameter is {@code null}, the content of the IsAvailable Steps field will be emptied (delete operation).
+@param workItemURI the SubterraURI of the item to set the WI
+@param testSteps an array containing an entry for each step
+@since 3.7.0   </wsdl:documentation>
+      <wsdl:input name="setIsAvailableStepsRequest" message="impl:setIsAvailableStepsRequest" />
+      <wsdl:output name="setIsAvailableStepsResponse" message="impl:setIsAvailableStepsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateSummaryDefect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Create or update the summary defect Work Item of a test run.
+@param testRunUri URI of the test run to update the summary defect for.
+@param source source of the summary defect, used to generate the description content.
+@param totalFailures amount of total failures in the test run, used to generate the description content.
+@param totalErrors amount of total errors in the test run, used to generate the description content.
+@param totalIsAvailables amount of total tests in the test run, used to generate the description content.
+@param defectTemplateUri URI of the defect template Work Item to be used, the configured template will be used if {@code null}.
+@return the URI of the created summary defect Work Item.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="updateSummaryDefectRequest" message="impl:updateSummaryDefectRequest" />
+      <wsdl:output name="updateSummaryDefectResponse" message="impl:updateSummaryDefectResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateIsAvailableRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Update a test record.
+@param testRunUri URI of the test run in which the test record will be updated.
+@param index of the test record in the test run.
+@param testResultId ID of the test result, can be {@code null}.
+@param testComment comment to be tracked with the test record, can be {@code null}.
+@param executedByUri URI of the user to be used as author of the test record, can be {@code null}.
+@param executed date when the test case has been executed, can be {@code null}.
+@param duration duration of the test case execution, any negative value is treated as {@code null}.
+@param defectUri URI of the defect Work Item to be linked from created record, can be {@code null}. 
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="updateIsAvailableRecordRequest" message="impl:updateIsAvailableRecordRequest" />
+      <wsdl:output name="updateIsAvailableRecordResponse" message="impl:updateIsAvailableRecordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateIsAvailableRecordAtIndex">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Updates or removes the IsAvailable Record at given index in the IsAvailable Run. 
+@param testRunUri URI of the target IsAvailable Run 
+@param index index of the IsAvailable Record in the list of all IsAvailable Records of the target IsAvailable Run 
+@param testRecord new IsAvailable Record content, or null to remove the IsAvailable Record
+@since 3.7.0   </wsdl:documentation>
+      <wsdl:input name="updateIsAvailableRecordAtIndexRequest" message="impl:updateIsAvailableRecordAtIndexRequest" />
+      <wsdl:output name="updateIsAvailableRecordAtIndexResponse" message="impl:updateIsAvailableRecordAtIndexResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateIsAvailableRun">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Update a test run.
+@param content new content of the test run, the uri of the content must be set otherwise the call will fail.
+@since 3.6.0   </wsdl:documentation>
+      <wsdl:input name="updateIsAvailableRunRequest" message="impl:updateIsAvailableRunRequest" />
+      <wsdl:output name="updateIsAvailableRunResponse" message="impl:updateIsAvailableRunResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateIsAvailableRunAttachment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Updates IsAvailable Run Attachment given by IsAvailable Run and attachment's file name.
+Method is applicable on IsAvailable Run Template.
+@param testRunUri URI of IsAvailable Run or IsAvailable Run Template containing target attachment
+@param fileName file name of Attachment to update
+@param title new attachment title (if null attachment title is not updated)
+@param data new attachment data (if null attachment data is not updated)
+@since 3.7.1   </wsdl:documentation>
+      <wsdl:input name="updateIsAvailableRunAttachmentRequest" message="impl:updateIsAvailableRunAttachmentRequest" />
+      <wsdl:output name="updateIsAvailableRunAttachmentResponse" message="impl:updateIsAvailableRunAttachmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateWikiContentForIsAvailableRun">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+Updates Wiki Page content of given IsAvailable Run or IsAvailable Run Template. 
+@param testRunUri URI of IsAvailable Run or IsAvailable Run Template
+@param content new Wiki Page content of IsAvailable Run or IsAvailable Run Template  
+@since 3.7.1   </wsdl:documentation>
+      <wsdl:input name="updateWikiContentForIsAvailableRunRequest" message="impl:updateWikiContentForIsAvailableRunRequest" />
+      <wsdl:output name="updateWikiContentForIsAvailableRunResponse" message="impl:updateWikiContentForIsAvailableRunResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IsAvailableManagementWebServiceSoapBinding" type="impl:IsAvailableManagementWebService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addAttachmentToIsAvailableRecord">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addAttachmentToIsAvailableRecordRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addAttachmentToIsAvailableRecordResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAttachmentToIsAvailableRun">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addAttachmentToIsAvailableRunRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addAttachmentToIsAvailableRunResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAttachmentToIsAvailableStep">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addAttachmentToIsAvailableStepRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addAttachmentToIsAvailableStepResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addIsAvailableRecord">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addIsAvailableRecordRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addIsAvailableRecordResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addIsAvailableRecordToIsAvailableRun">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addIsAvailableRecordToIsAvailableRunRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addIsAvailableRecordToIsAvailableRunResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createSummaryDefect">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createSummaryDefectRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createSummaryDefectResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createIsAvailableRun">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="createIsAvailableRunRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createIsAvailableRunResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAttachmentFromIsAvailableRecord">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deleteAttachmentFromIsAvailableRecordRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteAttachmentFromIsAvailableRecordResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAttachmentFromIsAvailableStep">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deleteAttachmentFromIsAvailableStepRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteAttachmentFromIsAvailableStepResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteIsAvailableRunAttachment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deleteIsAvailableRunAttachmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteIsAvailableRunAttachmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableRunAttachment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getIsAvailableRunAttachmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getIsAvailableRunAttachmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableRunAttachments">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getIsAvailableRunAttachmentsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getIsAvailableRunAttachmentsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableRunById">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getIsAvailableRunByIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getIsAvailableRunByIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableRunByUri">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getIsAvailableRunByUriRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getIsAvailableRunByUriResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableSteps">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getIsAvailableStepsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getIsAvailableStepsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailableStepsConfiguration">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getIsAvailableStepsConfigurationRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getIsAvailableStepsConfigurationResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIsAvailablesConfiguration">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getIsAvailablesConfigurationRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getIsAvailablesConfigurationResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWikiContentForIsAvailableRun">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getWikiContentForIsAvailableRunRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getWikiContentForIsAvailableRunResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRecords">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchIsAvailableRecordsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchIsAvailableRecordsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunTemplates">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchIsAvailableRunTemplatesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchIsAvailableRunTemplatesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunTemplatesLimited">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchIsAvailableRunTemplatesLimitedRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchIsAvailableRunTemplatesLimitedResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunTemplatesWithFields">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchIsAvailableRunTemplatesWithFieldsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchIsAvailableRunTemplatesWithFieldsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunTemplatesWithFieldsLimited">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchIsAvailableRunTemplatesWithFieldsLimitedRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchIsAvailableRunTemplatesWithFieldsLimitedResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRuns">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchIsAvailableRunsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchIsAvailableRunsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunsLimited">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchIsAvailableRunsLimitedRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchIsAvailableRunsLimitedResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunsWithFields">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchIsAvailableRunsWithFieldsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchIsAvailableRunsWithFieldsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchIsAvailableRunsWithFieldsLimited">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchIsAvailableRunsWithFieldsLimitedRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="searchIsAvailableRunsWithFieldsLimitedResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setIsAvailableSteps">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="setIsAvailableStepsRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setIsAvailableStepsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSummaryDefect">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateSummaryDefectRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateSummaryDefectResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIsAvailableRecord">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateIsAvailableRecordRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateIsAvailableRecordResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIsAvailableRecordAtIndex">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateIsAvailableRecordAtIndexRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateIsAvailableRecordAtIndexResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIsAvailableRun">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateIsAvailableRunRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateIsAvailableRunResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIsAvailableRunAttachment">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateIsAvailableRunAttachmentRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateIsAvailableRunAttachmentResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateWikiContentForIsAvailableRun">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="updateWikiContentForIsAvailableRunRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateWikiContentForIsAvailableRunResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IsAvailableManagementWebServiceService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+      This service provides build related functionality.
+		  </wsdl:documentation>
+    <wsdl:port name="IsAvailableManagementWebService" binding="impl:IsAvailableManagementWebServiceSoapBinding">
+      <wsdlsoap:address location="http://seabay:84/polarion/ws/services/IsAvailableManagementWebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

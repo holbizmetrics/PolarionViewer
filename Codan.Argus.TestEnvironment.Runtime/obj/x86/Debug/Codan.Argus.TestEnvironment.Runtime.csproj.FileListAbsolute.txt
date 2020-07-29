@@ -1,0 +1,11 @@
+C:\Sources\software-project-environment\TestEnvironment\Codan.Argus.TestEnvironment.Runtime\bin\Debug\Codan.Argus.TestEnvironment.Runtime.dll
+C:\Sources\software-project-environment\TestEnvironment\Codan.Argus.TestEnvironment.Runtime\bin\Debug\Codan.Argus.TestEnvironment.Runtime.pdb
+C:\Sources\software-project-environment\TestEnvironment\Codan.Argus.TestEnvironment.Runtime\obj\x86\Debug\Codan.Argus.TestEnvironment.Runtime.csprojAssemblyReference.cache
+C:\Sources\software-project-environment\TestEnvironment\Codan.Argus.TestEnvironment.Runtime\obj\x86\Debug\Codan.Argus.TestEnvironment.Runtime.csproj.CoreCompileInputs.cache
+C:\Sources\software-project-environment\TestEnvironment\Codan.Argus.TestEnvironment.Runtime\obj\x86\Debug\Codan.Argus.TestEnvironment.Runtime.dll
+C:\Sources\software-project-environment\TestEnvironment\Codan.Argus.TestEnvironment.Runtime\obj\x86\Debug\Codan.Argus.TestEnvironment.Runtime.pdb
+D:\source\repos\PolarionViewer\Codan.Argus.TestEnvironment.Runtime\bin\Debug\Codan.Argus.TestEnvironment.Runtime.dll
+D:\source\repos\PolarionViewer\Codan.Argus.TestEnvironment.Runtime\bin\Debug\Codan.Argus.TestEnvironment.Runtime.pdb
+D:\source\repos\PolarionViewer\Codan.Argus.TestEnvironment.Runtime\obj\x86\Debug\Codan.Argus.TestEnvironment.Runtime.csproj.CoreCompileInputs.cache
+D:\source\repos\PolarionViewer\Codan.Argus.TestEnvironment.Runtime\obj\x86\Debug\Codan.Argus.TestEnvironment.Runtime.dll
+D:\source\repos\PolarionViewer\Codan.Argus.TestEnvironment.Runtime\obj\x86\Debug\Codan.Argus.TestEnvironment.Runtime.pdb
